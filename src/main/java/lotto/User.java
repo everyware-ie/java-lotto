@@ -6,12 +6,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class User {
-    List<Lotto> lottoList;
+    List<Lotto> lottoList = new ArrayList<>();
     int price;
     List<Integer> numbers;
     int bonusNum;
     public User(){}
 
+    // TODO: payment로 변경
     public void setPrice(int price){
         this.price = price;
     }
@@ -51,7 +52,7 @@ public class User {
         System.out.println(tickets + "개를 구매했습니다.");
         for(int i=0; i<tickets; i++) {
             List<Integer> numbers = Randoms.pickUniqueNumbersInRange(1, 45, 6);
-            this.lottoList.add(new Lotto(numbers));
+            lottoList.add(new Lotto(numbers));
         }
     }
 
