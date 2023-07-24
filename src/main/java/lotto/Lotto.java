@@ -1,24 +1,22 @@
 package lotto;
 
-import java.util.ArrayList;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 
+@Getter @Setter
 public class Lotto {
     private final List<Integer> numbers;
 
     public Lotto(List<Integer> numbers) {
-        validate(numbers);
+//        validate(numbers);
         this.numbers = numbers;
     }
 
-    private void validate(List<Integer> numbers) {
-        if (numbers.size() != 6) {
-            throw new IllegalArgumentException();
-        }
-    }
-
-    // TODO: 추가 기능 구현
-    public List<Integer> getNumbers() {
-        return numbers;
-    }
+//    private void validate(List<Integer> numbers) {
+//        if (numbers.size() != 6) {
+//            throw new IllegalArgumentException("[ERROR] 6개 입력해라잉");
+//        }
+//    }
 }
